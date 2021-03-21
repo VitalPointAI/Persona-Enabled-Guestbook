@@ -7,7 +7,7 @@
     "build:contract": "asb",
     "build:contract:debug": "asb --target debug",
     "build:web": "parcel build src/index.html --public-url ./",
-    "deploy": "yarn build && near deploy && gh-pages -d dist/",
+    "deploy": "yarn build && near deploy",
     "dev": "yarn build:contract:debug && near dev-deploy && nodemon --watch assembly -e ts --exec yarn dev:start",
     "lint": "eslint \"./**/*.js\" \"./**/*.jsx\"",
     "start": "yarn deploy && parcel src/index.html",
@@ -34,6 +34,9 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
+    "@ceramicnetwork/http-client": "^0.9.6",
+    "@ceramicstudio/idx": "^0.8.0",
+    "@material-ui/core": "^4.11.3",
     "big.js": "^6.0.3",
     "env-cmd": "^10.1.0",
     "near-api-js": "^0.38.0",
@@ -43,7 +46,8 @@
     "regenerator-runtime": "^0.13.7"
   },
   "resolutions": {
-     "@babel/preset-env": "7.13.8"
+    "@babel/preset-env": "7.13.8",
+    "cids": "1.1.6"
   },
   "jest": {
     "projects": [
@@ -66,16 +70,8 @@
       "assembly/*"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+  "browserslist": [
+      "last 1 chrome version"
     ]
-  }
+  
 }

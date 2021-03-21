@@ -39,17 +39,23 @@ async function initContract() {
     sender: walletConnection.getAccountId()
   });
 
-  return { contract, currentUser, nearConfig, walletConnection };
+  const didContract = await new nearAPI.Contract(walletConnection.account(), 'dids.vitalpointai.testnet', {
+    viewMethods: ['getDID', 'hasDID', 'findAlias', 'getAliases', 'getDefinitions'],
+    changeMethods: []
+  })
+
+  return { contract, currentUser, nearConfig, walletConnection, didContract };
 }
 
 window.nearInitPromise = initContract()
-  .then(({ contract, currentUser, nearConfig, walletConnection }) => {
+  .then(({ contract, currentUser, nearConfig, walletConnection, didContract }) => {
     ReactDOM.render(
       <App
         contract={contract}
         currentUser={currentUser}
         nearConfig={nearConfig}
         wallet={walletConnection}
+        didContract={didContract}
       />,
       document.getElementById('root')
     );
