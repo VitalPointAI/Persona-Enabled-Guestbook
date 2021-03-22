@@ -51,7 +51,7 @@ const App = ({ contract, currentUser, nearConfig, wallet, didContract }) => {
         const ceramicClient = new CeramicClient(API_URL, {docSyncEnabled: true})
         let userIdx = new IDX({ ceramic: ceramicClient, aliases: profileAlias})
         let result = await userIdx.get('profile', did)
-        console.log('result', result)
+        
         // 5.  Finally, if there is a data record in the profile for the DID, we set it
         // to some state variables so we can use them in the app wherever we like. Have
         // commented out all the profile fields except avatar for this example.       
@@ -121,7 +121,7 @@ const App = ({ contract, currentUser, nearConfig, wallet, didContract }) => {
         ? <Form onSubmit={onSubmit} currentUser={currentUser} />
         : <SignIn/>
       }
-      { !!currentUser && !!messages.length && <Messages messages={messages}/> }
+      { !!currentUser && !!messages.length && <Messages messages={messages} didContract={didContract}/> }
     </main>
   );
 };
