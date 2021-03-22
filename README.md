@@ -1,13 +1,12 @@
-Guest Book
-==========
+Persona Integrated Guest Book
+=============================
 
-[![Build Status](https://travis-ci.com/near-examples/guest-book.svg?branch=master)](https://travis-ci.com/near-examples/guest-book)
+This code integrates NEAR Personas into the NEAR Guest Book Example.  This repository has an accompanying tutorial [Building NEAR Personas - Decentralized Identity with NEAR Protocol and Ceramic Network](https://vitalpoint.ai/building-near-personas-decentralized-identity-with-near-protocol-and-ceramic-network/) including detailed video walkthrough on [Vital Point AI](https://vitalpoint.ai)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/near-examples/guest-book)
+![NEAR Persona Guestbook](https://cdn.vitalpoint.ai/vitalpointai-cdn/2021/03/before-after-personas.png)
 
-<!-- MAGIC COMMENT: DO NOT DELETE! Everything above this line is hidden on NEAR Examples page -->
 
-Sign in with [NEAR] and add a message to the guest book! A starter app built with an [AssemblyScript] backend and a [React] frontend.
+Sign in with [NEAR] and add a message to the guest book - complete with avatar and custom name provided by [NEAR Personas](https://nearpersonas.com)! A starter app showcasing how to integrate Personas into your app - built with an [AssemblyScript] backend and a [React] frontend.
 
 
 Quick Start
@@ -102,7 +101,8 @@ As you can see in `package.json`, this does two things:
 2. builds & deploys frontend code to GitHub using [gh-pages]. This will only work if the project already has a repository set up on GitHub. Feel free to modify the `deploy` script in `package.json` to deploy elsewhere.
 
 
-
+  [Vital Point AI]: https://vitalpoint.ai
+  [NEAR Personas]: https://nearpersonas.com
   [NEAR]: https://nearprotocol.com/
   [yarn]: https://yarnpkg.com/
   [AssemblyScript]: https://docs.assemblyscript.org/
@@ -115,4 +115,4 @@ As you can see in `package.json`, this does two things:
   [near-cli]: https://github.com/nearprotocol/near-cli
   [CLI]: https://www.w3schools.com/whatis/whatis_cli.asp
   [create-near-app]: https://github.com/nearprotocol/create-near-app
-  [gh-pages]: https://github.com/tschaub/gh-pages
+ 

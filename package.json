@@ -1,6 +1,7 @@
 {
-  "name": "guest-book",
+  "name": "persona-guest-book",
   "version": "0.1.0",
+  "author": "Personas integration by Aaron Luhning <a.luhning@vitalpoint.ai> building on NEAR dev Guestbook example.",
   "license": "(MIT AND Apache-2.0)",
   "scripts": {
     "build": "yarn build:contract && yarn build:web",
